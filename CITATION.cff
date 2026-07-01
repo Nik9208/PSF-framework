@@ -1,18 +1,20 @@
 cff-version: 1.2.0
-message: "If you use this methodology or software in your work, please cite it using the following metadata."
-title: "Information-Theoretic Causal Complexity Space (ICCS)"
-version: 0.1.2
-date-released: 2026-07-01
+message: "If you use this software, please cite it as below."
 authors:
-  - family-names: "Research Team"
-  - family-names: "Nik"
-    given-names: "Nik"
-abstract: "An iterative methodology for constructing and validating structural complexity representations through systematic falsification against specifically constructed boundary conditions."
-repository-code: "https://github.com/Nik9208/PSF-framework"
-url: "https://github.com/your-org/PSF-framework"
+  - family-names: "PSF"
+    given-names: "Framework Contributors"
+title: "PSF Framework: Boundary Validation Protocol and Information-Theoretic Structural Complexity Space"
+version: 0.3.1
+date-released: 2026-07-01
+url: "https://github.com/psf-framework/PSF-framework"
+repository-code: "https://github.com/psf-framework/PSF-framework"
+abstract: >
+  The PSF framework introduces the Boundary Validation Protocol (BVP) and the Information-Theoretic Structural Complexity Space (ICCS) to evaluate the structural sensitivity of representation algorithms under temporal, representation, and noise boundaries. Validated on synthetic and multivariate sensor trajectories (e.g., C-MAPSS).
 keywords:
-  - complexity
-  - time-series
-  - epistemology
-  - information-theory
-  - causality
+  - causal inference
+  - information theory
+  - complex systems
+  - structural boundaries
+  - sensor trajectories
+  - C-MAPSS
+license: MIT
