@@ -1,9 +1,16 @@
 cff-version: 1.2.0
-title: "Predictive Structure Framework (PSF)"
-message: "If you use this work, please cite this repository."
-type: software
-authors:
-  - name: "PSF Researcher"
-version: "v1.0-preprint"
+message: "If you use this methodology or software in your work, please cite it using the following metadata."
+title: "Boundary Validation Protocol (BVP) and ICCS Framework"
+version: 0.1.0
 date-released: 2026-07-01
-url: "https://github.com/predictivestructure/PSF-framework"
+authors:
+  - family-names: "Nik"
+    given-names: "Nik"
+abstract: "An iterative methodology for constructing and validating structural complexity representations through systematic falsification against specifically constructed boundary conditions."
+repository-code: "https://github.com/Nik9208/PSF-framework"
+keywords:
+  - complexity
+  - time-series
+  - epistemology
+  - information-theory
+  - causality

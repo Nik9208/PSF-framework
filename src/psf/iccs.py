@@ -31,9 +31,14 @@ class ICCS:
         """
         Computes the Information-theoretic Causal Complexity Score vector.
         If X is a univariate time series, Y and Z will be generated via delay embedding in the causal layer.
+        If X is multivariate, geometry uses the full space, but memory and causal default to the first dimension.
         """
+        X_geom = X
+        if len(X.shape) > 1:
+            X = X[:, 0]
+            
         M = compute_memory_profile(X, max_k=self.max_k_memory, n_neighbors=self.k_neighbors_mi)
-        D_local = compute_local_dimension(X, k=self.k_neighbors_id)
+        D_local = compute_local_dimension(X_geom, k=self.k_neighbors_id)
         te_fwd, te_rev, cmi = compute_causal_fingerprint(X, Y, Z)
         
         return ICCSProfile(

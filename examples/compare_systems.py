@@ -47,3 +47,34 @@ if __name__ == "__main__":
 
     print_row("Causal (X->Y)", prof_causal)
     print_row("Mimic (Harmonic)", prof_mimic)
+    
+    # ---------------------------------------------------------
+    # Visual Output (Grouped Bar Chart)
+    # ---------------------------------------------------------
+    try:
+        import matplotlib.pyplot as plt
+    except ImportError:
+        print("\nNote: matplotlib not found. Skipping plot generation.")
+        sys.exit(0)
+        
+    labels = ['M', 'D_local', 'TE+', 'TE-', 'CMI']
+    causal_vals = [prof_causal['M'], prof_causal['D_local'], prof_causal['TE_forward'], prof_causal['TE_reverse'], prof_causal['CMI']]
+    mimic_vals = [prof_mimic['M'], prof_mimic['D_local'], prof_mimic['TE_forward'], prof_mimic['TE_reverse'], prof_mimic['CMI']]
+    
+    x = np.arange(len(labels))
+    width = 0.35
+    
+    fig, ax = plt.subplots(figsize=(8, 5))
+    rects1 = ax.bar(x - width/2, causal_vals, width, label='Causal (X->Y)')
+    rects2 = ax.bar(x + width/2, mimic_vals, width, label='Mimic (Harmonic)')
+    
+    ax.set_ylabel('Score / Value')
+    ax.set_title('Structural Feature Space (ICCS) Comparison')
+    ax.set_xticks(x)
+    ax.set_xticklabels(labels)
+    ax.legend()
+    
+    plt.tight_layout()
+    plot_path = os.path.join(os.path.dirname(__file__), "compare_systems_plot.png")
+    plt.savefig(plot_path)
+    print(f"\nSaved visualization to {plot_path}")
