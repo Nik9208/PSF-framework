@@ -1,13 +1,15 @@
 cff-version: 1.2.0
 message: "If you use this methodology or software in your work, please cite it using the following metadata."
-title: "Boundary Validation Protocol (BVP) and ICCS Framework"
-version: 0.1.0
+title: "Information-Theoretic Causal Complexity Space (ICCS)"
+version: 0.1.2
 date-released: 2026-07-01
 authors:
+  - family-names: "Research Team"
   - family-names: "Nik"
     given-names: "Nik"
 abstract: "An iterative methodology for constructing and validating structural complexity representations through systematic falsification against specifically constructed boundary conditions."
 repository-code: "https://github.com/Nik9208/PSF-framework"
+url: "https://github.com/your-org/PSF-framework"
 keywords:
   - complexity
   - time-series
