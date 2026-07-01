@@ -14,6 +14,25 @@ ICCS v1.1 (Information-theoretic Causal Complexity Score)
 * **Four validated boundary benchmarks**
 * **Open-source experimental framework**
 
+## Quick Start
+
+```python
+# Install the package
+# pip install -e .
+
+from psf import ICCS
+
+# Compute the structural feature space profile
+profile = ICCS().fit(data)
+
+print(profile)
+```
+
+Output:
+```text
+{'M': 0.72, 'D_local': 2.14, 'TE_forward': 0.31, 'TE_reverse': 0.02, 'CMI': 0.04}
+```
+
 ## Overview
 Evaluating the "complexity" of structural representations requires stress-testing the estimators themselves. 
 This repository introduces the **Boundary Validation Protocol (BVP)**, an iterative methodology for developing structural complexity measures through systematic falsification against specifically constructed boundary conditions.
@@ -28,18 +47,23 @@ Rather than searching for a universal scalar metric of complexity, the BVP opera
 **BVP workflow:**
 `metric` $\rightarrow$ `boundary test` $\rightarrow$ `failure` $\rightarrow$ `new descriptor` $\rightarrow$ `repeat`
 
-By intentionally stress-testing metrics against isolated structural ambiguities, the BVP forces the evolution of multidimensional, boundary-validated feature spaces rather than relying on brittle scalar formulas.
+By intentionally stress-testing metrics against isolated structural ambiguities, the BVP drives the evolution of multidimensional, boundary-validated feature spaces rather than relying on brittle scalar formulas.
 
 ## Repository Structure
 
+- `src/psf/`: Core Python API (`psf`).
+  - `iccs.py`: The `ICCS` facade class.
+  - `memory.py`: Predictive Memory Profile estimator $M(k)$.
+  - `geometry.py`: Local Intrinsic Dimension estimator $D_{local}$.
+  - `causal.py`: Causal Fingerprint estimators ($TE_{+}$, $TE_{-}$, $CMI$).
 - `docs/`: Core methodology documentation.
   - `BVP_Protocol.md`: The formal BVP algorithm and epistemology.
   - `Definitions.md`: Formal definitions of Boundaries, Ambiguity Classes, and Orthogonal Descriptors.
   - `ICCS_v1.1_Architecture.md`: The structural feature space derived via BVP.
   - `Publication_Outline.md`: The outline of the research paper.
 - `Boundaries/`: Formal definitions of the four isolated ambiguity boundaries.
-- `Experiments/`: Python validation scripts executing the BVP stress-tests.
-- `Results/`: Empirical results of the ICCS v1.1 case study passing the boundaries.
+- `Experiments/`: Python validation scripts executing the BVP stress-tests and robustness evaluation.
+- `Results/`: Empirical results of the ICCS v1.1 case study evaluated against the boundaries.
 - `examples/`: Simple usage demos for the framework.
 - `legacy/`: Archive of the evolutionary iterations and previous metric configurations.
 
