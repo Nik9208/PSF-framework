@@ -1,6 +1,6 @@
-# PSF Framework v0.2 Reproducibility Guide
+# PSF Framework v0.3.1 Reproducibility Guide
 
-This guide provides the exact commands and environment requirements to reproduce the v0.2 empirical validation suite on the NASA C-MAPSS dataset.
+This guide provides the exact commands and environment requirements to reproduce the v0.3.1 empirical validation suite on the NASA C-MAPSS dataset.
 
 ## Environment Requirements
 
@@ -12,7 +12,6 @@ The following Python packages are required to run the validation scripts:
 - `scikit-learn`
 - `pyyaml`
 - `matplotlib` (for generating figures)
-- `seaborn` (for generating figures)
 
 Ensure the `psf` package is installed in editable mode:
 ```bash
@@ -44,10 +43,18 @@ python Experiments/cmapss/02_iccs_representation_analysis.py
 ```
 *Outputs:* `Results/cmapss/csv/cmapss_representation_iccs.csv`
 
-### Experiment 3: Noise Boundary
-Evaluates the robustness of structural signatures under 0-20% relative Gaussian observational noise.
+### Experiment 3: Noise Robustness Evaluation
+
+Evaluates the stability of ICCS components under relative Gaussian noise:
 ```bash
 python Experiments/cmapss/03_iccs_noise_analysis.py
+```
+
+### Experiment 4: Baseline Discrimination Study
+
+Compares ICCS sensitivity against scalar and low-dimensional baselines:
+```bash
+python Experiments/cmapss/04_baseline_comparison.py
 ```
 *Outputs:* `Results/cmapss/csv/cmapss_noise_iccs.csv`
 
