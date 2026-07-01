@@ -1,0 +1,23 @@
+[
+    {
+        "System": "Direct causal (A)",
+        "MI_forward": 0.734517456680253,
+        "MI_reverse": 0.34547148802800365,
+        "CMI_proxy": NaN,
+        "ICCS": 0.6837651797933919
+    },
+    {
+        "System": "Common driver (B)",
+        "MI_forward": 0.5944680684578474,
+        "MI_reverse": 0.5932352412794142,
+        "CMI_proxy": 0.0,
+        "ICCS": 0.5129317887618493
+    },
+    {
+        "System": "Reverse (C)",
+        "MI_forward": 0.4856530704056601,
+        "MI_reverse": 1.2816118966512517,
+        "CMI_proxy": NaN,
+        "ICCS": 0.45786614373170864
+    }
+]
