@@ -1,0 +1,18 @@
+{
+    "diff": 0.1442011267757115,
+    "lorenz_target": {
+        "config": {
+            "dt": 0.05,
+            "noise_std": 0.0
+        },
+        "mi": 1.801669313918545
+    },
+    "stochastic_match": {
+        "type": "AR(1)",
+        "config": {
+            "a": 0.99,
+            "noise": 1.0
+        },
+        "mi": 1.9458704406942564
+    }
+}

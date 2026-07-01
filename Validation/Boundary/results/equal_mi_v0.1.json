@@ -1,0 +1,23 @@
+[
+    {
+        "System": "Lorenz",
+        "MI": 3.4138182861511215,
+        "Stability_Var": 0.0032351998366923216,
+        "ICCS_Proxy": 3.3000606519160107,
+        "Notes": "chaotic attractor"
+    },
+    {
+        "System": "AR(1)",
+        "MI": 1.9949327844007305,
+        "Stability_Var": 0.01846387137926706,
+        "ICCS_Proxy": 1.7231691269388318,
+        "Notes": "stochastic matched (a=0.990)"
+    },
+    {
+        "System": "Oscillator",
+        "MI": 0.06809973281687842,
+        "Stability_Var": 0.00013969378271489754,
+        "ICCS_Proxy": 0.04446130793577456,
+        "Notes": "noisy periodic"
+    }
+]

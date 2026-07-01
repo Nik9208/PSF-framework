@@ -165,3 +165,7 @@ Framework concepts tested:
 - Observer Independence Principle
 - Observer-Induced Migration
 - ICCS
+
+---
+
+> **Note**: For adversarial observer testing and falsification boundaries, see the [Boundary Validation Series](Boundary/README.md) and specifically [Adversarial Representations](Boundary/Adversarial_Representations.md).
