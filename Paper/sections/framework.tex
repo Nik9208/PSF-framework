@@ -1,0 +1,25 @@
+\section{Theoretical Framework}
+
+\subsection{Predictive Representation}
+Let $\Phi$ be a candidate representation of a dynamical system. The predictive accessibility $I(\Phi,h)$ measures the amount of information available for future prediction at horizon $h$.
+
+\subsection{Optimal Representation}
+The optimal predictive representation is defined as:
+\begin{equation}
+\Phi^*(h) = \arg\max_\Phi I(\Phi,h)
+\end{equation}
+
+\subsection{Representation Regimes}
+The framework identifies distinct regimes of predictive information dynamics:
+\begin{itemize}
+    \item \textbf{Regime I (Representation Migration):} The dominant predictive carrier changes domains (e.g., $\Phi_A \to \Phi_B$).
+    \item \textbf{Regime II (Representation Refinement):} The domain remains the same, but the mathematical description improves.
+    \item \textbf{Regime III (Information Horizon Collapse):} Predictive information becomes inaccessible.
+\end{itemize}
+
+\subsection{Observer Independence Principle}
+A model may select a representation because it is convenient for its architecture, not because it is physically predictive. To solve this, we introduce the Information-Conditioned Carrier Score (ICCS):
+\begin{equation}
+ICCS(\Phi,h) = PIS(\Phi,h) \times AO(\Phi,h)
+\end{equation}
+which combines the Predictive Information Share (PIS) and Algorithmic Observability (AO) to separate predictive accessibility from observer preference.
