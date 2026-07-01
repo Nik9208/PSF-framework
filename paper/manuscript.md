@@ -66,3 +66,10 @@ Testing representational transformations (Rolling features, PCA) demonstrated th
 
 ### 5.4 Noise Robustness Evaluation
 Under additive relative Gaussian noise (up to 20%), different ICCS components exhibited distinct sensitivity profiles. Local geometric estimates remained comparatively stable, while memory predictably attenuated, maintaining a consistently detectable boundary between healthy and degraded states.
+
+## Limitations
+
+- Validation was performed on FD001 with a single operating condition.
+- Channel selection was evaluated under a fixed baseline protocol.
+- TE and CMI are interpreted as dependency estimates rather than physical causality.
+- Results characterize structural signatures, not optimal prediction performance.

@@ -23,7 +23,10 @@ def main():
     base_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '../..'))
     data_path = os.path.join(base_dir, 'data', 'cmapss', 'FD001', 'train_FD001.txt')
     yaml_path = os.path.join(base_dir, 'Experiments', 'cmapss', 'selected_channels.yaml')
-    out_csv = os.path.join(base_dir, 'Results', 'cmapss', 'cmapss_representation_iccs.csv')
+    
+    out_dir = os.path.join(base_dir, 'Results', 'cmapss', 'csv')
+    os.makedirs(out_dir, exist_ok=True)
+    out_csv = os.path.join(out_dir, 'cmapss_representation_iccs.csv')
     
     if not os.path.exists(data_path) or not os.path.exists(yaml_path):
         print("[!] Data or selected_channels.yaml not found.")
