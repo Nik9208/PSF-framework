@@ -4,3 +4,20 @@ __pycache__/
 .venv/
 env/
 .DS_Store
+
+# Archives
+*.zip
+*.tar.gz
+
+# LaTeX auxiliary files
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+
+# Compiled documents
+*.pdf

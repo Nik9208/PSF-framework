@@ -1,0 +1,113 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{booktabs}
+
+\title{Structural Complexity Mapping: Boundaries and Failure Regimes}
+\author{PSF Framework}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+The Boundary Validation Protocol (BVP) posits that complexity measures must be evaluated against structural boundary cases rather than correlated with subjective intuition. This paper introduces the Information-Theoretic Structural Complexity Space (ICCS), a multi-dimensional representation of geometric, temporal, and dependency structures. We transition from theory to empirical validation by mapping the operational boundaries and sensitivity regimes of ICCS under observational noise, evaluated on synthetic systems and multivariate sensor trajectories.
+\end{abstract}
+
+\section*{Contributions}
+\begin{itemize}
+    \item Proposes the Boundary Validation Protocol (BVP) for evaluating representation sensitivity
+    \item Introduces ICCS as a multidimensional structural profile
+    \item Characterizes boundary-dependent behavior across synthetic and real-world multivariate trajectories
+    \item Compares ICCS against scalar and low-dimensional baselines
+\end{itemize}
+
+\section{The BVP Protocol Pipeline}
+The BVP framework operates on a systematic boundary-testing loop. 
+
+\textit{(Mermaid workflow diagram omitted for standard compilation. The loop evaluates Metric Space S against a Boundary Test. If failure occurs, a new orthogonal descriptor is added; otherwise, the representation is validated.)}
+
+\section{Differential Degradation (Results)}
+The ICCS feature space reveals non-redundant structural failure modes under observational noise boundaries. 
+\begin{itemize}
+    \item \textbf{Geometry ($D_{local}$)} remained comparatively stable, suggesting robustness of the estimated local geometric structure \cite{Facco2017} under moderate noise.
+    \item \textbf{Predictive Memory ($M$)} degraded smoothly and monotonically.
+    \item \textbf{Dependency Signature ($TE$)} \cite{Schreiber2000} exhibited sharp, system-specific sensitivity regimes.
+\end{itemize}
+
+\subsection*{The Lorenz Insight}
+A key observation was the rapid reduction of directed information transfer ($TE$) in the deterministic Lorenz system \cite{Lorenz1963} under minimal noise ($5\%$). The reduction of TE in Lorenz under noise does not indicate a loss of structural complexity. Instead, it reveals that predictive memory and geometric organization can persist independently from detectable directed information transfer. This supports the interpretation that these axes capture distinct aspects of the observed dynamics.
+
+\section{Boundary Preservation}
+The central evaluation of the ICCS feature space is its ability to distinguish a directed dependency system ($X \rightarrow Y$) from a predictive mimic with identical predictive mutual information \cite{Kraskov2004}. 
+
+As tested up to 20\% relative Gaussian noise, the absolute metrics degraded, but the \textbf{Relative Dependency Gap} ($\approx 0.90 - 1.00$) remained consistently separated. The structural separation remains detectable under observational noise, indicating that dependency structure separation can remain detectable after substantial attenuation of absolute metric values.
+
+Furthermore, testing hyperparameter stability across $k \in \{5, 10, 20, 50\}$ demonstrated qualitative stability of structural ordering ($TE_{directed} > TE_{mimic}$ across all tested k values).
+
+\section{Scalar Collapse Revalidation (Experiment 5)}
+We investigated whether scalar projections of the feature space preserve the structural separability required by BVP. Testing projections like the $L_2$ norm ($f_1 = ||S||_2$) and algebraic sum ($f_2 = \sum S_i$), we found that while numerical gaps existed, they were driven by large non-dependency components (e.g., $M(k)$ in the mimic system overwhelming the $TE$ in the directed system). 
+
+The naive scalar metric ranked the predictive mimic as ``more complex'' than the reference directed-dependency system simply due to its higher autoregressive memory. This empirical result indicates that the tested scalar projections do not reliably preserve the structural distinctions validated by the BVP suite.
+
+\section{Empirical Validation on Multivariate Sensor Trajectories}
+
+\subsection{Dataset and Evaluation Protocol}
+To transition from synthetic bounds to real-world operational stress, we evaluated the ICCS representation against the NASA C-MAPSS turbofan degradation dataset (FD001) \cite{Saxena2008}. A data-driven baseline was established via variance filtering and Spearman dependency clustering \cite{Spearman1904}, yielding a fixed representation ($X=s9, Y=s4, Z=s3$) selected independently of RUL labels.
+
+\begin{table}[h]
+\centering
+\begin{tabular}{llll}
+\toprule
+\textbf{Experiment} & \textbf{Boundary} & \textbf{Stressor} & \textbf{Evaluated effect} \\
+\midrule
+Temporal & lifetime & degradation & component separation \\
+Representation & compression & transformations & structural information loss \\
+Noise & observation & Gaussian perturbation & robustness profile \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Temporal Boundary Evaluation}
+When mapping ICCS profiles across normalized Early, Middle, and Late degradation phases, the components separated distinct degradation-related responses. Memory and dependency measures evolved significantly, while local geometric estimates remained decoupled and comparatively stable.
+
+\subsection{Representation Boundary Evaluation}
+Testing representational transformations (Rolling features, PCA) demonstrated that representations are not structurally neutral. Smoothing can increase apparent temporal memory, while dimensionality reduction can reduce explicit multivariate cross-channel representation.
+
+\subsection{Noise Robustness Evaluation}
+Under additive relative Gaussian noise (up to 20\%), different ICCS components exhibited distinct sensitivity profiles. Local geometric estimates remained comparatively stable, while memory predictably attenuated, maintaining a consistently detectable boundary between healthy and degraded states.
+
+\section{Validation Framework: Boundary-Based Representation Evaluation}
+The validation suite evaluates whether different representations preserve distinguishable structural properties under controlled boundary conditions.
+
+\begin{table}[h]
+\centering
+\begin{tabular}{llll}
+\toprule
+\textbf{Boundary} & \textbf{Stress factor} & \textbf{Question} & \textbf{Evaluated component} \\
+\midrule
+Temporal & degradation & How does structure evolve? & M, $D_{local}$, TE, CMI \\
+Representation & compression & What information is altered? & structural preservation \\
+Noise & perturbation & What survives measurement? & robustness \\
+Baseline & choice & What aspects are missing? & sensitivity profile \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section*{Limitations}
+\begin{itemize}
+    \item Validation was performed on FD001 with a single operating condition.
+    \item Channel selection was evaluated under a fixed baseline protocol.
+    \item TE and CMI are interpreted as dependency estimates rather than physical causality.
+    \item Results characterize structural signatures, not optimal prediction performance.
+    \item The baseline comparison evaluates structural sensitivity rather than predictive accuracy.
+    \item Extension to additional datasets and structural regimes is required to assess broader generalization.
+\end{itemize}
+
+\bibliographystyle{unsrt}
+\bibliography{references}
+
+\end{document}
