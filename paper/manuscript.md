@@ -38,4 +38,4 @@ Furthermore, testing hyperparameter stability across $k \in \{5, 10, 20, 50\}$ d
 
 We investigated whether scalar projections of the feature space preserve the structural separability required by BVP. Testing projections like the $L_2$ norm ($f_1 = ||S||_2$) and algebraic sum ($f_2 = \sum S_i$), we found that while numerical gaps existed, they were driven by massive, non-causal components (e.g., $M(k)$ in the mimic system overwhelming the $TE$ in the causal system). 
 
-The naive scalar metric ranked the predictive mimic as "more complex" than the truly causal system simply due to its higher autoregressive memory. This empirical result definitively demonstrates why structural complexity cannot be reduced to a scalar without losing essential causal and geometric distinctions.
+The naive scalar metric ranked the predictive mimic as "more complex" than the truly causal system simply due to its higher autoregressive memory. This empirical result demonstrates that the tested scalar projections do not preserve the structural distinctions validated by the BVP suite.
