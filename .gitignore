@@ -1,7 +1,6 @@
-*.aux
-*.log
-*.out
-*.bbl
-*.blg
-*.pdf
-*.gz
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.venv/
+env/
+.DS_Store
