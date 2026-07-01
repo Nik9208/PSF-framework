@@ -1,0 +1,10 @@
+channels:
+  X: s9
+  Y: s4
+  Z: s3
+selection_method:
+  variance_filter: true
+  variance_threshold: 1.0e-05
+  clustering: Spearman Rank + Complete Linkage
+  uses_rul: false
+  manual_override: false
