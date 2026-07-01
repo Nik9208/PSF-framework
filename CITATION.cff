@@ -1,9 +1,20 @@
 cff-version: 1.2.0
-title: "Predictive Structure Framework (PSF)"
-message: "If you use this work, please cite this repository."
-type: software
+message: "If you use this software, please cite it as below."
 authors:
-  - name: "PSF Researcher"
-version: "v1.0-preprint"
+  - family-names: "PSF"
+    given-names: "Framework Contributors"
+title: "PSF Framework: Boundary Validation Protocol and Information-Theoretic Structural Complexity Space"
+version: 0.3.1
 date-released: 2026-07-01
-url: "https://github.com/predictivestructure/PSF-framework"
+url: "https://github.com/psf-framework/PSF-framework"
+repository-code: "https://github.com/psf-framework/PSF-framework"
+abstract: >
+  The PSF framework introduces the Boundary Validation Protocol (BVP) and the Information-Theoretic Structural Complexity Space (ICCS) to evaluate the structural sensitivity of representation algorithms under temporal, representation, and noise boundaries. Validated on synthetic and multivariate sensor trajectories (e.g., C-MAPSS).
+keywords:
+  - causal inference
+  - information theory
+  - complex systems
+  - structural boundaries
+  - sensor trajectories
+  - C-MAPSS
+license: MIT

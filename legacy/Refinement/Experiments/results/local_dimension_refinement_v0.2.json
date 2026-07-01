@@ -1,0 +1,32 @@
+[
+    {
+        "Observer": "Original",
+        "D_local": 2.1895414724475373,
+        "Delta_D": 0.0
+    },
+    {
+        "Observer": "Numerical_Noise",
+        "D_local": 2.1894521769158435,
+        "Delta_D": 4.0782754205597223e-05
+    },
+    {
+        "Observer": "Scaling",
+        "D_local": 2.194113515289114,
+        "Delta_D": 0.0020881279935135266
+    },
+    {
+        "Observer": "Rotation",
+        "D_local": 2.1895414724475413,
+        "Delta_D": 1.825406341439522e-15
+    },
+    {
+        "Observer": "Cubic_Bijection",
+        "D_local": 2.1907766782038784,
+        "Delta_D": 0.0005641390089589955
+    },
+    {
+        "Observer": "Permutation",
+        "D_local": 2.1895414724475373,
+        "Delta_D": 0.0
+    }
+]

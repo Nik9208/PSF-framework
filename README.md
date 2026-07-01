@@ -1,146 +1,66 @@
-# Predictive Structure Framework (PSF)
+# PSF Framework v0.3.1 Reproducibility Guide
 
-> An information-based framework for analyzing predictive representations in dynamical systems.
+This guide provides the exact commands and environment requirements to reproduce the v0.3.1 empirical validation suite on the NASA C-MAPSS dataset.
 
----
+## Environment Requirements
 
-## Overview
+The following Python packages are required to run the validation scripts:
+- `Python 3.8+`
+- `numpy`
+- `pandas`
+- `scipy`
+- `scikit-learn`
+- `pyyaml`
+- `matplotlib` (for generating figures)
 
-PSF investigates how predictive structure appears, changes, and becomes inaccessible in dynamical systems.
-
----
-
-## Scope
-
-PSF is an operational framework.
-
-It does not claim that predictive representations are identical to causal mechanisms or fundamental physical variables.
-
----
-
-The central idea:
-
-A dynamical system does not necessarily have a single fixed predictive representation.
-
-The optimal representation depends on:
-
-- prediction horizon,
-- available information,
-- representation space,
-- observer constraints.
-
----
-
-## Core Principle
-
-The framework defines the optimal predictive representation:
-
-$$ \Phi^*(h) = \arg\max_\Phi I(\Phi,h) $$
-
-where:
-
-- $\Phi$ — candidate representation
-- $h$ — prediction horizon
-- $I(\Phi,h)$ — accessible predictive information
-
----
-
-## Main Concepts
-
-### Representation Migration
-
-A change in the dominant predictive representation.
-
-Example:
-
-$$ \Phi_A \to \Phi_B $$
-
-when another representation becomes more informative for prediction.
-
----
-
-### Representation Refinement
-
-The predictive domain remains the same, but the mathematical description improves.
-
----
-
-### Information Horizon Collapse
-
-At large horizons or high uncertainty, predictive information may become inaccessible.
-
----
-
-### Observer Independence Principle
-
-Machine learning models are treated as observers.
-
-A model can select a representation because of:
-
-- architecture,
-- inductive bias,
-- optimization preference.
-
-Therefore:
-
-**model importance $\neq$ physical predictive structure**
-
----
-
-## Current Framework
-
-Version:
-
-Predictive Structure Framework v1.0-preprint
-
-Status:
-
-Research framework under validation.
-
----
-
-## Repository Structure
-
-```
-Framework/
-Core theory and mathematical definitions
-
-Experiments/
-Dynamical system validation
-
-Validation/
-Boundary and observer tests
-
-Paper/
-Publication drafts
-
-Figures/
-Future diagrams
+Ensure the `psf` package is installed in editable mode:
+```bash
+pip install -e .
 ```
 
----
+## Execution Protocol
 
-## Systems Tested
+The validation suite is divided into four sequential scripts. They must be executed from the root of the repository.
 
-- Lorenz
-- Rössler
-- Logistic Map
-- Van der Pol
-- Duffing oscillator
+### Phase 0: Channel Selection
+Generates the unbiased baseline representation by removing near-constant sensors and reducing redundancy.
+```bash
+python Experiments/cmapss/00_channel_selection.py
+```
+*Outputs:* `Experiments/cmapss/selected_channels.yaml`
 
----
+### Experiment 1: Temporal Boundary
+Evaluates how ICCS components evolve across distinct degradation phases (Early, Middle, Late).
+```bash
+python Experiments/cmapss/01_iccs_cmapss_analysis.py
+```
+*Outputs:* `Results/cmapss/csv/cmapss_temporal_iccs.csv`
 
-## Future Research
+### Experiment 2: Representation Boundary
+Tests the sensitivity of the ICCS representation to mathematical compression (PCA, Rolling means).
+```bash
+python Experiments/cmapss/02_iccs_representation_analysis.py
+```
+*Outputs:* `Results/cmapss/csv/cmapss_representation_iccs.csv`
 
-Boundary stress testing:
+### Experiment 3: Noise Robustness Evaluation
 
-- hidden variables
-- causal vs predictive divergence
-- adversarial representations
-- observer robustness
+Evaluates the stability of ICCS components under relative Gaussian noise:
+```bash
+python Experiments/cmapss/03_iccs_noise_analysis.py
+```
 
----
+### Experiment 4: Baseline Discrimination Study
 
-## License
+Compares ICCS sensitivity against scalar and low-dimensional baselines:
+```bash
+python Experiments/cmapss/04_baseline_comparison.py
+```
+*Outputs:* `Results/cmapss/csv/cmapss_noise_iccs.csv`
 
-Research project.
+### Figure Generation
+Generates the scientific visualizations used in the summaries.
+```bash
+python Experiments/cmapss/generate_figures.py
+```
+*Outputs:* PNG files in `Results/cmapss/figures/`
