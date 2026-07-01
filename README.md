@@ -8,6 +8,16 @@
 
 PSF investigates how predictive structure appears, changes, and becomes inaccessible in dynamical systems.
 
+---
+
+## Scope
+
+PSF is an operational framework.
+
+It does not claim that predictive representations are identical to causal mechanisms or fundamental physical variables.
+
+---
+
 The central idea:
 
 A dynamical system does not necessarily have a single fixed predictive representation.

@@ -1,4 +1,4 @@
-# Operational Framework v1.0-preprint
+# PSF v1.0-preprint
 
 ## Predictive Representation Analysis in Dynamical Systems
 
@@ -180,7 +180,7 @@ Predictive accessibility is not identical to causal explanation.
 
 # 9. Future Work
 
-Boundary stress tests (Project X):
+PSF Boundary Validation Series:
 - hidden variable systems;
 - causal/predictive divergence;
 - adversarial representations;
