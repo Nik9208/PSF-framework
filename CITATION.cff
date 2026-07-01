@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+title: "Predictive Structure Framework (PSF)"
+message: "If you use this work, please cite this repository."
+type: software
+authors:
+  - name: "PSF Researcher"
+version: "v1.0-preprint"
+date-released: 2026-07-01
+url: "https://github.com/predictivestructure/PSF-framework"
