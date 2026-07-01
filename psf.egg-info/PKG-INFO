@@ -1,8 +1,18 @@
+Metadata-Version: 2.4
+Name: psf
+Version: 0.1.0
+Summary: Boundary Validation Protocol (BVP) and ICCS v1.1 Framework
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: scikit-learn
+Dynamic: license-file
+
 # Boundary Validation Protocol (BVP)
 
 An iterative methodology for constructing and validating structural complexity representations.
-
-**Current version:** BVP 0.1 / ICCS v1.1
 
 **Case study:**
 ICCS v1.1 (Information-theoretic Causal Complexity Score)
