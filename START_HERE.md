@@ -1,304 +1,172 @@
-# 👋 Welcome to PSF/ICCS
+# Welcome to PSF / ICCS v1.0
 
-If you are opening this repository for the first time, this file will help you quickly understand what this project is about, why it is needed, and where to start.
+If you are opening this repository for the first time, this file will help you quickly understand what this project is about and how to start.
 
-You do not need to know information theory, statistics, or machine learning to understand the project. Here we explain the core idea in plain words.
-
----
-
-# What is this project?
-
-PSF/ICCS is a research tool for analyzing the structure of multivariate time series.
-
-Simply put, it helps answer the question:
-
-> **Which system properties are detectable from the observed data, and which appear only due to the chosen method of analysis?**
-
-In many domains (equipment sensors, biological signals, climate data, etc.), data looks very complex.
-
-Usually, researchers try to describe it with a single numerical characteristic:
-
-* entropy;
-* variance;
-* complexity index;
-* a single quality metric.
-
-But a single number often hides differences between completely different systems.
-
-This is exactly the problem this project tries to solve.
+You do not need deep knowledge of machine learning or information theory. The core idea can be understood intuitively.
 
 ---
 
-# The Main Idea
+# 🧠 What is this project?
 
-Instead of a single "complexity" score, we consider several independent characteristics of the system's structure.
+PSF / ICCS is a research framework for analyzing the structure and dynamics of multivariate time series.
+**ICCS is a framework for discovering and validating latent structure in time-dependent systems.**
 
-For example, two systems might have the same entropy, but:
+Instead of asking:
 
-* the first one has strong memory;
-* the second one has almost no memory;
+> "What is the value of this system?"
 
-or
+we ask:
 
-* the first one contains strong dependencies between variables;
-* the second one consists of almost independent processes.
-
-If you use only one number, these differences might disappear.
-
-Therefore, ICCS describes the system across several dimensions simultaneously.
+> "What structural behavior does this system exhibit over time?"
 
 ---
 
-# Why is the project named PSF/ICCS?
+# 📌 The Main Problem
 
-**PSF** refers to the original research framework, which sets the general validation paradigm. 
+In many real-world datasets (sensors, finance, biology, climate systems), we usually reduce complexity to a single number:
 
-**ICCS** (Information-Theoretic Structural Complexity Space) is the specific multidimensional feature space (structural complexity profile) evaluated within it. 
+- entropy
+- variance
+- complexity score
+- risk index
 
-This separation allows for testing other data representations in the future under the same BVP validation approach.
+But a single number cannot distinguish fundamentally different systems.
 
----
-
-# What is ICCS?
-
-ICCS stands for
-
-**Information-Theoretic Structural Complexity Space**
-
-Despite the complex name, the idea is very simple.
-
-ICCS is not a single metric.
-
-It is a system profile.
-
-Instead of answering
-
-> "Complexity = 4.8"
-
-we get a description of several properties at once.
-
-Currently, ICCS includes three main directions of analysis.
+Two systems can look identical numerically but behave completely differently over time.
 
 ---
 
-## 1. Memory
+# 🧠 Core Idea of ICCS
 
-Answers the question:
+ICCS represents a system as a **multi-dimensional regime structure**, not a single metric.
 
-> How much does the past help predict the future?
+Instead of outputting one value, it describes:
 
-If the system's state heavily depends on its previous states, memory is considered high.
-
-If the past says almost nothing about the future, memory is low.
-
-Example:
-
-A pendulum has high memory.
-
-A sequence of random numbers has practically none.
+- how states are organized
+- how they transition over time
+- how stable those transitions are
+- how structure changes under stress
 
 ---
 
-## 2. Geometry
+# 🏗 How ICCS works (3 layers)
 
-Answers the question:
+## 1. Representation Layer
+Transforms raw time series into structured latent regimes.
 
-> How is the system's state space structured?
-
-Imagine that every state of the system becomes a point.
-
-Sometimes all points lie almost on a line.
-
-Sometimes they form a surface.
-
-Sometimes they fill a complex multidimensional region.
-
-Geometry estimates exactly this hidden data organization.
+Includes:
+- structural decomposition
+- regime extraction
+- temporal orientation analysis
 
 ---
 
-## 3. Dependency
+## 2. Dynamics Layer
+Models how regimes evolve over time.
 
-Answers the question:
-
-> To what extent are different parts of the system statistically related or provide predictive information about each other?
-
-For example:
-
-engine temperature
-
-↓
-
-pressure
-
-↓
-
-vibration
-
-If a change in one variable helps explain a change in another, this is reflected in the Dependency component.
+Includes:
+- transition graphs
+- regime stability estimation
+- manifold geometry and curvature analysis
 
 ---
 
-# What is BVP?
+## 3. Control & Learning Layer
+Analyzes and adapts the structure itself.
 
-BVP stands for
-
-**Boundary Validation Protocol**
-
-It is not an algorithm.
-
-It is a validation method.
-
-It answers the question:
-
-> Can we trust the chosen data representation?
-
-To do this, the system is deliberately subjected to various changes.
-
-For example:
-
-* noise is added;
-* the method of data representation is changed;
-* different stages of system operation are analyzed.
-
-After each change, we check:
-
-Which properties are preserved?
-
-Which disappear?
-
-If a certain characteristic stops distinguishing between different systems after even a small change in the data, it means we have found the boundary of its applicability.
-
-This is exactly why the method is called Boundary Validation.
+Includes:
+- causal risk field estimation
+- collapse prediction
+- self-optimizing representation learning
 
 ---
 
-# Why do BVP and ICCS exist together?
+# 🧪 How we test whether structure is real
 
-You can imagine their roles like this.
+ICCS is tested against:
 
-BVP answers:
+- synthetic dynamical systems (Logistic map, Lorenz system)
+- noise and shuffled surrogates
+- random processes
+- real-world proxy datasets
 
-> How to test?
+And compared to standard baselines:
 
-ICCS answers:
-
-> What to measure?
-
-They complement each other.
-
----
-
-# What can be analyzed?
-
-The project is designed to analyze multivariate time series.
-
-For example:
-
-* sensor data;
-* industrial equipment;
-* physiological signals;
-* climate observations;
-* experimental measurements;
-* financial time series.
-
-The main condition is that the data must represent a sequence of observations over time.
+- HMM models
+- spectral embeddings (Koopman-style)
+- change-point detection methods
+- clustering-based methods (PCA + GMM, UMAP + HDBSCAN)
 
 ---
 
-# What is used as an example?
+# 🔍 What makes ICCS different?
 
-The main validation of the project is performed on two types of data.
+Instead of detecting only:
 
-## Synthetic Systems
+- clusters
+- anomalies
+- or change points
 
-They allow creating controlled situations where it is known in advance which structural properties should be preserved.
+ICCS builds a **structured map of regime behavior over time**, including:
 
-This helps to understand how different components of ICCS behave.
+- stability of regimes
+- transitions between regimes
+- structural deformation of the system itself
+- predictive risk of collapse
 
----
-
-## NASA C-MAPSS
-
-This is an open dataset simulating the degradation of aviation engines.
-
-It is used as a real-world example of how observed structural signatures change during degradation.
-
-Important to understand:
-
-The project is not designed to predict the remaining useful life of an engine.
-
-The data is used as a convenient real-world environment to test the behavior of ICCS and BVP.
+Crucially, **ICCS actively tests whether the structure is real** or just a statistical hallucination by subjecting it to strict falsification harnesses.
 
 ---
 
-# What will you get after the analysis?
+# 📊 What you get as output
 
-Instead of a single score, you will get a structural profile.
+Instead of a single score, ICCS produces:
 
-For example:
+- regime structure
+- transition graph
+- stability metrics
+- curvature / instability maps
+- causal risk signals
 
-```
-Memory      high
-Geometry    stable
-Dependency  decreasing
+---
+
+# ⚠️ Important limitations
+
+ICCS is a research framework.
+
+It does NOT:
+
+- guarantee causal discovery
+- replace physical modeling
+- provide absolute truth about system structure
+
+It is a tool for exploring structural hypotheses about data.
+
+---
+
+# 🚀 How to start
+
+Run the full pipeline:
+
+```bash
+cd Experiments/v0.4/phase4
+python run_all.py
 ```
 
-or
+Or explore components in:
 
-```
-Memory      decreasing
-Geometry    almost unchanged
-Dependency  drops sharply
-```
-
-Such a profile allows you to understand **exactly which system properties are changing**, not just that the "complexity became lower".
+* `experiments/` — benchmarking and validation
+* `iccs_v4/` — core framework
+* `results/` — generated outputs
 
 ---
 
-# Do I need to understand the math?
+# 📌 Summary
 
-No.
+ICCS helps answer:
 
-To get familiar with the project, it is enough to understand the meaning of the components.
+> "What structure is hidden in time-dependent data, and how does it evolve?"
 
-All mathematical details are in the manuscript and source code.
+rather than:
 
-If you want to use the ready-made experiments, knowing the exact formulas is not required.
-
----
-
-# Where to start?
-
-If you want to get familiar with the project:
-
-1. Read this file.
-
-2. Then open `README.md`.
-
-For reproducible experiments, use the provided environment and scripts described in `REPRODUCIBILITY.md`.
-
-If you are interested in the theory — open `paper/manuscript.md`.
-
----
-
-# Project Limitations
-
-It is important to understand that PSF/ICCS is a research tool.
-
-It **does not try to automatically determine the "true complexity" of any system**.
-
-It also **does not establish physical causality between variables**.
-
-ICCS helps to explore various aspects of data structure and shows which properties are preserved or changed under different stressors.
-
----
-
-# Future Plans
-
-In the next versions of the project, we plan to:
-
-* simplify the execution of the analysis;
-* add support for custom datasets;
-* expand usage examples;
-* further develop structural evaluation methods.
+> "What is the next value?"
