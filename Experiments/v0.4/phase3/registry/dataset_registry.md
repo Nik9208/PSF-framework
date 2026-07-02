@@ -1,0 +1,11 @@
+# Phase 3 Dataset Registry
+
+| Dataset name | Version | Source | Download date | License | Citation | SHA256 (Raw) | SHA256 (Processed) | Observations | Processing script |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| **PhysioNet NSRDB** | v1.0.0 | [PhysioNet (nsrdb)](https://physionet.org/content/nsrdb/1.0.0/) | 2026-07-02 | ODC-PDDL | Goldberger et al. (2000) | 9d242b5a8cdd35d665d008106992206c8da027ff953e40c785c27cff869380e9 | 5616525eab1d6e4859d1a4f32444a6c18c4aba7f9c06e7bd92e6ca2804c6a540 | 100183 | `physiology_pipeline.py` v1 |
+| **NOAA Niño 3.4 SST (Raw)** | N/A | [NOAA PSL](https://psl.noaa.gov/data/correlation/nina34.data) | 2026-07-02 | Public Domain | Rayner et al. (2003) | c42e3c651a7dc9bd4ded19dfb8b3f8875a3ba25a6826ff09e537b349a0b64e24 | c42e3c651a7dc9bd4ded19dfb8b3f8875a3ba25a6826ff09e537b349a0b64e24 | 917 | `climate_pipeline.py` v1 |
+| **NOAA Niño 3.4 SST (FT)** | N/A | [NOAA PSL](https://psl.noaa.gov/data/correlation/nina34.data) | 2026-07-02 | Public Domain | Rayner et al. (2003) | c42e3c651a7dc9bd4ded19dfb8b3f8875a3ba25a6826ff09e537b349a0b64e24 | e22d2ba10ad545231a3c1e3a14193c8036e6347c1e5cb4dcb7cbaf9e7890726e | 917 | `climate_pipeline.py` v1 |
+| **NOAA Niño 3.4 SST (IAAFT)** | N/A | [NOAA PSL](https://psl.noaa.gov/data/correlation/nina34.data) | 2026-07-02 | Public Domain | Rayner et al. (2003) | c42e3c651a7dc9bd4ded19dfb8b3f8875a3ba25a6826ff09e537b349a0b64e24 | bbb6548f9888eeae9ea836392b9d74ed2613e4104d0601558ce04167b51e34e9 | 917 | `climate_pipeline.py` v1 |
+| **S&P 500 Daily (Log-Returns)** | N/A | Static CSV (Yahoo Finance) | 2026-07-02 | Public Domain | N/A | dbae7c4215b67819f4428ff5e664857313e451c0eef5101892b8caf31451de91 | 59f4b787d58e47f7a763966fdefbe920820203d4997e97990d6ffb2281b52cd8 | 6036 | `economics_pipeline.py` v1 |
+| **S&P 500 Daily (FT Surrogate)** | N/A | Static CSV (Yahoo Finance) | 2026-07-02 | Public Domain | N/A | dbae7c4215b67819f4428ff5e664857313e451c0eef5101892b8caf31451de91 | 37580cc7e87ff2c2a633d1b55c61353aace55ed388f54d814400c6b56b4decb9 | 6036 | `economics_pipeline.py` v1 |
+| **S&P 500 Daily (IAAFT Surrogate)** | N/A | Static CSV (Yahoo Finance) | 2026-07-02 | Public Domain | N/A | dbae7c4215b67819f4428ff5e664857313e451c0eef5101892b8caf31451de91 | 2218f1d0a14a6cec333f77241e74f4e09b7397873922f8f34b6ad2256ac8593c | 6036 | `economics_pipeline.py` v1 |

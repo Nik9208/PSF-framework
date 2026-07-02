@@ -1,0 +1,31 @@
+{
+    "domain": "Economics (S&P 500 Daily Log-Returns)",
+    "iccs_version": "0.3.1",
+    "analysis_timestamp": "2026-07-02 14:18:51",
+    "python_version": "3.14.5",
+    "git_commit": "653c0860c0c43a8264d182e6d35a5e68029336a7",
+    "protocol": "Phase3 v1.0",
+    "surrogate_sensitivity_fingerprint": {
+        "Geometry_Dlocal": {
+            "RAW": 1.129185828670716,
+            "FT": 1.1308478425132926,
+            "IAAFT": 1.129185828670716,
+            "RAW_CLIPPED": 1.1218395548515459
+        },
+        "Memory_Depth": {
+            "RAW": 0.307565903063157,
+            "FT": 0.015165788804607061,
+            "IAAFT": 0.02100022037754723,
+            "RAW_CLIPPED": 0.37731812119259
+        },
+        "TE_Asymmetry": {
+            "RAW": 2.2933881196638106,
+            "FT": 2.274687445794288,
+            "IAAFT": 2.3273677150206797,
+            "RAW_CLIPPED": 2.7488178881287015,
+            "Delta_RAW_FT": 0.018700673869522788,
+            "Delta_RAW_IAAFT": -0.03397959535686912,
+            "Delta_RAW_CLIPPED": -0.4554297684648909
+        }
+    }
+}

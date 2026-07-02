@@ -1,0 +1,12 @@
+{
+  "states": [
+    0,
+    1,
+    2
+  ],
+  "stability": {
+    "mean_self_transition": 0.4555555554698148,
+    "transition_entropy": 0.46084894443670826,
+    "absorbing_states": []
+  }
+}

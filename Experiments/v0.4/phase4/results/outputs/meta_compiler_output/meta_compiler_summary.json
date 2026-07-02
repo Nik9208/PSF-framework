@@ -1,0 +1,95 @@
+{
+  "best_config": {
+    "n_components": 3,
+    "n_clusters": 7,
+    "energy": 893.9775130583158,
+    "separation": 43.99211895453966,
+    "score": -402.99663757461826
+  },
+  "history": [
+    {
+      "n_components": 2,
+      "n_clusters": 3,
+      "energy": 894.5704588833858,
+      "separation": 40.94739254075043,
+      "score": -406.3378369009424
+    },
+    {
+      "n_components": 2,
+      "n_clusters": 4,
+      "energy": 894.5704588833858,
+      "separation": 36.27613981359493,
+      "score": -411.00908962809797
+    },
+    {
+      "n_components": 2,
+      "n_clusters": 5,
+      "energy": 894.5704588833858,
+      "separation": 36.34401778776069,
+      "score": -410.9412116539322
+    },
+    {
+      "n_components": 2,
+      "n_clusters": 6,
+      "energy": 894.5704588833858,
+      "separation": 34.65462829364607,
+      "score": -412.6306011480468
+    },
+    {
+      "n_components": 2,
+      "n_clusters": 7,
+      "energy": 894.5704588833858,
+      "separation": 43.98885369713684,
+      "score": -403.29637574455603
+    },
+    {
+      "n_components": 2,
+      "n_clusters": 8,
+      "energy": 894.5704588833858,
+      "separation": 41.35873680648207,
+      "score": -405.9264926352108
+    },
+    {
+      "n_components": 3,
+      "n_clusters": 3,
+      "energy": 893.9775130583158,
+      "separation": 40.94739965703094,
+      "score": -406.041356872127
+    },
+    {
+      "n_components": 3,
+      "n_clusters": 4,
+      "energy": 893.9775130583158,
+      "separation": 36.27614676113319,
+      "score": -410.7126097680247
+    },
+    {
+      "n_components": 3,
+      "n_clusters": 5,
+      "energy": 893.9775130583158,
+      "separation": 36.34463187635329,
+      "score": -410.64412465280463
+    },
+    {
+      "n_components": 3,
+      "n_clusters": 6,
+      "energy": 893.9775130583158,
+      "separation": 34.65719046561591,
+      "score": -412.331566063542
+    },
+    {
+      "n_components": 3,
+      "n_clusters": 7,
+      "energy": 893.9775130583158,
+      "separation": 43.99211895453966,
+      "score": -402.99663757461826
+    },
+    {
+      "n_components": 3,
+      "n_clusters": 8,
+      "energy": 893.9775130583158,
+      "separation": 41.36484400554644,
+      "score": -405.62391252361147
+    }
+  ]
+}

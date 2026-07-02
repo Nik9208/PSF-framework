@@ -1,0 +1,28 @@
+signals:
+  constant:
+    description: "Baseline with zero variance"
+    expectations: "Degenerate profile or undefined (NaN)"
+  gaussian_white_noise:
+    description: "Pure stochastic"
+    expectations: "M near baseline, TE near baseline, no stable low-dim Geometry"
+  uniform_noise:
+    description: "Pure stochastic, uniform dist"
+    expectations: "Statistically indistinguishable from Gaussian White Noise"
+  pink_noise:
+    description: "1/f noise"
+    expectations: "M shows long-range memory, TE near baseline, no stable low-dim Geometry"
+  sine:
+    description: "Pure deterministic periodic"
+    expectations: "High M, TE near baseline (predictable), trivial low-dim Geometry"
+  sine_trend:
+    description: "Non-stationary periodic"
+    expectations: "Distorted profile; trend may inflate Geometry or M"
+  ar1:
+    description: "Linear memory"
+    expectations: "Exponential M decay, TE near baseline, no chaotic attractor in Geometry"
+  lorenz:
+    description: "Deterministic chaos"
+    expectations: "Complex M, non-trivial dependency (TE), low-dimensional nonlinear attractor in Geometry"
+  changepoint:
+    description: "Structural break"
+    expectations: "Metrics respond noticeably near the transition point"

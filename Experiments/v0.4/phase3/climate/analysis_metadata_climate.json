@@ -1,0 +1,27 @@
+{
+    "domain": "Climate (NOAA Ni\u00f1o 3.4 SST)",
+    "iccs_version": "0.3.1",
+    "analysis_timestamp": "2026-07-02 14:13:11",
+    "python_version": "3.14.5",
+    "git_commit": "653c0860c0c43a8264d182e6d35a5e68029336a7",
+    "protocol": "Phase3 v1.0",
+    "surrogate_sensitivity_fingerprint": {
+        "TE_Asymmetry": {
+            "RAW": 0.024637507045367713,
+            "FT": 0.06340648959367545,
+            "IAAFT": 0.06267193475610844,
+            "Delta_RAW_FT": -0.03876898254830774,
+            "Delta_RAW_IAAFT": -0.038034427710740726
+        },
+        "Memory_Depth": {
+            "RAW": 2.2082445922133482,
+            "FT": 1.8065123646559766,
+            "IAAFT": 1.7081262857305366
+        },
+        "Geometry_Dlocal": {
+            "RAW": 13812839642.672255,
+            "FT": 1.1164375871712031,
+            "IAAFT": 13812839642.672255
+        }
+    }
+}

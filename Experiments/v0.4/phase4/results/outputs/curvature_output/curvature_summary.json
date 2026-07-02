@@ -1,0 +1,15 @@
+{
+  "states": [
+    "0",
+    "1",
+    "2"
+  ],
+  "bifurcations": [
+    {
+      "state": "1",
+      "curvature": 1.0
+    }
+  ],
+  "deformation_index": 0.7747740555272614,
+  "plot": "curvature_output\\manifold_curvature.png"
+}

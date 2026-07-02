@@ -1,0 +1,212 @@
+[
+  {
+    "name": "stable_system",
+    "regime": "non_convergent_system",
+    "sco_score": 23.59118245984872,
+    "rso_risk": 0.018345408207858935,
+    "too_asymmetry": 0.06803834702215972
+  },
+  {
+    "name": "chaotic_system",
+    "regime": "non_convergent_system",
+    "sco_score": 12.766687966158074,
+    "rso_risk": 0.8670572749395238,
+    "too_asymmetry": 0.08591989468874717
+  },
+  {
+    "name": "degenerate_system",
+    "regime": "non_convergent_system",
+    "sco_score": 5.915127175297111,
+    "rso_risk": 0.038278820123429695,
+    "too_asymmetry": -0.0029629892881194997
+  },
+  {
+    "name": "stable_system",
+    "regime": "non_convergent_system",
+    "sco_score": 25.987306697109343,
+    "rso_risk": 0.025103872221565092,
+    "too_asymmetry": 0.025344200688354024
+  },
+  {
+    "name": "chaotic_system",
+    "regime": "non_convergent_system",
+    "sco_score": 13.022565560963164,
+    "rso_risk": 0.8670572749395238,
+    "too_asymmetry": 0.008578581696015997
+  },
+  {
+    "name": "degenerate_system",
+    "regime": "non_convergent_system",
+    "sco_score": 7.262779239505167,
+    "rso_risk": 0.038278820123429695,
+    "too_asymmetry": -0.06783589786161032
+  },
+  {
+    "name": "stable_system",
+    "regime": "non_convergent_system",
+    "sco_score": 1.370998164932171,
+    "rso_risk": 0.021916569724679476,
+    "too_asymmetry": -27.781491148437066
+  },
+  {
+    "name": "chaotic_system",
+    "regime": "non_convergent_system",
+    "sco_score": 2.972265589620244,
+    "rso_risk": 0.8670572749395238,
+    "too_asymmetry": -31.418409432790604
+  },
+  {
+    "name": "degenerate_system",
+    "regime": "non_convergent_system",
+    "sco_score": 1.624635591872198,
+    "rso_risk": 0.038278820123429695,
+    "too_asymmetry": -25.91296591714441
+  },
+  {
+    "name": "stable_system",
+    "regime": "non_convergent_system",
+    "sco_score": 26.017843077452962,
+    "rso_risk": 0.02540902820694176,
+    "too_asymmetry": 0.32992075322227865
+  },
+  {
+    "name": "chaotic_system",
+    "regime": "non_convergent_system",
+    "sco_score": 12.940067251862047,
+    "rso_risk": 0.8670572749395238,
+    "too_asymmetry": 0.3869708160607642
+  },
+  {
+    "name": "degenerate_system",
+    "regime": "non_convergent_system",
+    "sco_score": 5.781610321754083,
+    "rso_risk": 0.038278820123429695,
+    "too_asymmetry": 0.2596726574568773
+  },
+  {
+    "name": "stable_system",
+    "regime": "non_convergent_system",
+    "sco_score": 17.082196297555402,
+    "rso_risk": 0.025002817034660514,
+    "too_asymmetry": 0.4523092737041797
+  },
+  {
+    "name": "chaotic_system",
+    "regime": "non_convergent_system",
+    "sco_score": 9.804050158504808,
+    "rso_risk": 0.8670572749395238,
+    "too_asymmetry": 0.5595922343500387
+  },
+  {
+    "name": "degenerate_system",
+    "regime": "non_convergent_system",
+    "sco_score": 4.774905151649604,
+    "rso_risk": 0.038278820123429695,
+    "too_asymmetry": 0.37785198852113844
+  },
+  {
+    "name": "stable_system",
+    "regime": "non_convergent_system",
+    "sco_score": 15.481999731566072,
+    "rso_risk": 0.023968083232193117,
+    "too_asymmetry": 1.3082695301397456
+  },
+  {
+    "name": "chaotic_system",
+    "regime": "non_convergent_system",
+    "sco_score": 9.56404280025084,
+    "rso_risk": 0.8670572749395238,
+    "too_asymmetry": 1.549153771677398
+  },
+  {
+    "name": "degenerate_system",
+    "regime": "non_convergent_system",
+    "sco_score": 5.7230962959881895,
+    "rso_risk": 0.038278820123429695,
+    "too_asymmetry": 1.2132124379585427
+  },
+  {
+    "name": "stable_system",
+    "regime": "non_convergent_system",
+    "sco_score": 0.413106924936189,
+    "rso_risk": 0.02915733823607698,
+    "too_asymmetry": -86.06678322525846
+  },
+  {
+    "name": "chaotic_system",
+    "regime": "non_convergent_system",
+    "sco_score": 2.477072843186093,
+    "rso_risk": 0.8670572749395238,
+    "too_asymmetry": -100.51388582944084
+  },
+  {
+    "name": "degenerate_system",
+    "regime": "non_convergent_system",
+    "sco_score": 1.4706872934594155,
+    "rso_risk": 0.038278820123429695,
+    "too_asymmetry": -83.04226395276167
+  },
+  {
+    "name": "stable_system",
+    "regime": "non_convergent_system",
+    "sco_score": 5.520109289410343,
+    "rso_risk": 0.02739423372013279,
+    "too_asymmetry": 2.8869193589443376
+  },
+  {
+    "name": "chaotic_system",
+    "regime": "non_convergent_system",
+    "sco_score": 5.057147346759342,
+    "rso_risk": 0.8670572749395238,
+    "too_asymmetry": 3.634528766516098
+  },
+  {
+    "name": "degenerate_system",
+    "regime": "non_convergent_system",
+    "sco_score": 3.7031811209294037,
+    "rso_risk": 0.038278820123429695,
+    "too_asymmetry": 2.742955876506848
+  },
+  {
+    "name": "stable_system",
+    "regime": "non_convergent_system",
+    "sco_score": 1.9277779764738587,
+    "rso_risk": 0.025605783205745303,
+    "too_asymmetry": -14.639821715012719
+  },
+  {
+    "name": "chaotic_system",
+    "regime": "non_convergent_system",
+    "sco_score": 2.409606187601773,
+    "rso_risk": 0.8670572749395238,
+    "too_asymmetry": -16.967161029204657
+  },
+  {
+    "name": "degenerate_system",
+    "regime": "non_convergent_system",
+    "sco_score": 1.6345290915291795,
+    "rso_risk": 0.038278820123429695,
+    "too_asymmetry": -15.058532600394093
+  },
+  {
+    "name": "stable_system",
+    "regime": "non_convergent_system",
+    "sco_score": 21.671619749148864,
+    "rso_risk": 0.02883436512192232,
+    "too_asymmetry": 1.198360702743753
+  },
+  {
+    "name": "chaotic_system",
+    "regime": "non_convergent_system",
+    "sco_score": 12.060644210482508,
+    "rso_risk": 0.8670572749395238,
+    "too_asymmetry": 1.4509211150995647
+  },
+  {
+    "name": "degenerate_system",
+    "regime": "non_convergent_system",
+    "sco_score": 5.794572524428499,
+    "rso_risk": 0.038278820123429695,
+    "too_asymmetry": 1.1713382677628503
+  }
+]

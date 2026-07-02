@@ -1,0 +1,17 @@
+{
+    "dataset": "PhysioNet NSRDB (Subject 16265)",
+    "dataset_sha256": "5616525eab1d6e4859d1a4f32444a6c18c4aba7f9c06e7bd92e6ca2804c6a540",
+    "iccs_version": "0.3.1",
+    "analysis_timestamp": "2026-07-02 14:01:42",
+    "python_version": "3.14.5",
+    "git_commit": "653c0860c0c43a8264d182e6d35a5e68029336a7",
+    "processing_script_version": "`physiology_pipeline.py` v1",
+    "protocol": "Phase3 v1.0",
+    "global_metrics": {
+        "mean_D_local": 0.0002551053749447334,
+        "mean_M": 9.065314381325905,
+        "TE_forward": 1.1377580642802423,
+        "TE_reverse": 4.311460999189116,
+        "CMI": 4.311677747108496
+    }
+}
