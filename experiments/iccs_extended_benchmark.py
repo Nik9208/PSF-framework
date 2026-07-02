@@ -169,4 +169,4 @@ if __name__ == "__main__":
 
     print("\n=== EXTENDED BASELINE COMPARISON ===")
     print(results.to_string())
-    results.to_csv("extended_benchmark_results.csv", index=False)
+    results.to_csv("results/outputs/extended_benchmark_results.csv", index=False)

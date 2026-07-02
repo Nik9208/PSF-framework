@@ -115,7 +115,7 @@ def run_harness():
         })
         
     df = pd.DataFrame(results)
-    df.to_csv("debug_harness_results.csv", index=False)
+    df.to_csv("results/outputs/debug_harness_results.csv", index=False)
     
 if __name__ == "__main__":
     run_harness()

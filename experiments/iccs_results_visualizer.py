@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 
 class ICCSResultsVisualizer:
 
-    def __init__(self, output_dir="iccs_figures"):
+    def __init__(self, output_dir="results/figures"):
         self.output_dir = output_dir
         os.makedirs(self.output_dir, exist_ok=True)
 

@@ -149,7 +149,6 @@ It is a tool for exploring structural hypotheses about data.
 Run the full pipeline:
 
 ```bash
-cd Experiments/v0.4/phase4
 python run_all.py
 ```
 

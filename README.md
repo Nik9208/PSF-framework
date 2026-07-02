@@ -15,7 +15,6 @@ It provides a full pipeline:
 ## 🚀 Quick Start
 
 ```bash
-cd Experiments/v0.4/phase4
 python run_all.py
 ```
 

@@ -47,7 +47,7 @@ def main():
     )
 
     print("\n🎯 ICCS v1.0 PIPELINE COMPLETE")
-    print("Results written to /results and /iccs_figures")
+    print("Results written to results/outputs/ and results/figures/\n")
 
 
 if __name__ == "__main__":
