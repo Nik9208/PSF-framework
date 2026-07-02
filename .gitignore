@@ -1,23 +1,55 @@
+# Python
 __pycache__/
-*.pyc
-.ipynb_checkpoints/
+*.py[cod]
+*$py.class
+
+# Virtual environments
 .venv/
+venv/
 env/
+ENV/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE
+.vscode/
+.idea/
+
+# OS files
 .DS_Store
+Thumbs.db
+desktop.ini
+
+# Build / packaging
+build/
+dist/
+*.egg-info/
 
 # Archives
 *.zip
 *.tar.gz
+*.tar
+*.gz
 
 # LaTeX auxiliary files
 *.aux
 *.bbl
 *.blg
+*.fdb_latexmk
+*.fls
 *.log
 *.out
-*.fls
-*.fdb_latexmk
 *.synctex.gz
+*.toc
 
 # Compiled documents
 *.pdf
+
+# ---------------------------------------------------
+# ICCS Specific ignores
+# ---------------------------------------------------
+# We DO NOT ignore results/figures/ or results/outputs/ 
+# because they contain the v1.0 reference benchmark results.
+# However, if large datasets are added later, ignore them here:
+# data/
