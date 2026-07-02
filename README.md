@@ -4,6 +4,14 @@
 ![version](https://img.shields.io/badge/version-1.0-green)
 ![ICCS](https://img.shields.io/badge/framework-ICCS-orange)
 
+## 🏛 Repository History
+
+PSF v0.1–v0.3 has been archived under `archive/psf_v0.3/`.
+
+Active development continues in ICCS v1.0.x.
+
+---
+
 ICCS (Information-Theoretic Complex Systems framework) is an experimental system for analyzing temporal dynamics through regime extraction, transition topology, and stability-aware spectral embeddings.
 
 It provides a full pipeline:
