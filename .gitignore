@@ -46,13 +46,7 @@ dist/
 # Compiled documents
 *.pdf
 
-# ---------------------------------------------------
-# ICCS Specific ignores
-# ---------------------------------------------------
-# We DO NOT ignore results/figures/ or results/outputs/ 
-# because they contain the v1.0 reference benchmark results.
-# However, if large datasets are added later, ignore them here:
-# data/
+
 
 restore by description
 restore by description/
